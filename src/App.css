@@ -72,3 +72,21 @@
     cursor: pointer;
     user-select: none;
 }
+
+.search-bar {
+    display: block;
+    margin: 24px 32px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border: 1px solid #d0d0d0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    outline: none;
+    width: 250px;
+    background-color: #f7f7f7;
+    color: #1a1a1a;
+}
+
+.search-bar:focus {
+    border-color: #4a4ae0;
+}

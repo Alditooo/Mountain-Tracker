@@ -2,22 +2,36 @@
 
 import { mountains } from "../Data/Mountains";
 import MountainCard from "./MountainCard";
+import { useState } from "react";
 
 function MountainList() {
 
+    const [search, setSearch] = useState("")
+
+    const filterArray = mountains.filter((mountain) => 
+    mountain.name.toLowerCase().includes(search.toLowerCase()))
+
     return (
-        <div className="mountain-list">
-            {mountains.map((mountain) => (
-                <MountainCard 
-                    key={mountain.id}
-                    name={mountain.name}
-                    height={mountain.height}
-                    status={mountain.status}
-                    image={mountain.image}
-                    save={mountain.save}
-                />
-            ))}
-        </div>
+        <>
+            <input type="text" 
+            className="search-bar"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            />
+
+            <div className="mountain-list">
+                {filterArray.map((mountain) => (
+                    <MountainCard 
+                        key={mountain.id}
+                        name={mountain.name}
+                        height={mountain.height}
+                        status={mountain.status}
+                        image={mountain.image}
+                        save={mountain.save}
+                    />
+                ))}
+            </div>
+        </>
     )
 }
 
