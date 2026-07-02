@@ -14,6 +14,7 @@ function MountainList() {
                     height={mountain.height}
                     status={mountain.status}
                     image={mountain.image}
+                    save={mountain.save}
                 />
             ))}
         </div>

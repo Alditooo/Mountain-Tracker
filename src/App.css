@@ -30,6 +30,7 @@
     height: 180px;
     object-fit: cover;
     display: block;
+    user-select: none;
 }
 
 .card-name {
@@ -49,6 +50,8 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    justify-content: space-between;
+    width: 90%;
 }
 
 .card-status input[type="checkbox"] {
@@ -63,4 +66,9 @@
     color: #333;
     width: 90px;
     text-align: left;
+}
+
+.card svg {
+    cursor: pointer;
+    user-select: none;
 }
